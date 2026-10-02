@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F5FC"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:scrollbars="vertical"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="40dp">
+
+        <!-- NÚT QUAY LẠI -->
+
+        <ImageButton
+            android:id="@+id/btnQuayLai2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_revert"
+            android:elevation="4dp"
+            android:contentDescription="Quay lại"
+            android:padding="8dp"
+            app:tint="#111536" />
+
+        <!-- TIÊU ĐỀ -->
+
+        <TextView
+            android:id="@+id/tvTieuDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Hoàn tất thông tin"
+            android:textColor="#30377F"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMoTa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Hãy chọn loại tài khoản bạn muốn sử dụng"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <!-- TIÊU ĐỀ LOẠI TÀI KHOẢN -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Loại tài khoản"
+            android:textColor="#30377F"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- TÀI KHOẢN CÁ NHÂN -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTaiKhoanCaNhan"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+            app:strokeColor="#30377F"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <ImageView
+                    android:id="@+id/imgCaNhan"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#EEF0FF"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_user"
+                    app:tint="#30377F" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tài khoản cá nhân"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Tìm việc và ứng tuyển công việc"
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rbCaNhan"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:buttonTint="#30377F"
+                    android:contentDescription="Chọn tài khoản cá nhân" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TÀI KHOẢN DOANH NGHIỆP -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTaiKhoanDoanhNghiep"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+            app:strokeColor="#DADADA"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <ImageView
+                    android:id="@+id/imgDoanhNghiep"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#EEF0FF"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_building"
+                    app:tint="#30377F" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tài khoản doanh nghiệp"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Đăng công việc và tìm người làm"
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rbDoanhNghiep"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:buttonTint="#30377F"
+                    android:contentDescription="Chọn tài khoản doanh nghiệp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- FORM CÁ NHÂN -->
+
+        <LinearLayout
+            android:id="@+id/formCaNhan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Thông tin cá nhân"
+                android:textColor="#30377F"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- HỌ TÊN -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtHoTen"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Họ và tên"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- NGÀY SINH -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNgaySinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Ngày sinh"
+                    android:inputType="date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ĐỊA CHỈ CÁ NHÂN -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDiaChi"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Địa chỉ"
+                    android:inputType="textPostalAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- GIỚI THIỆU CÁ NHÂN -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtGioiThieu"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="top"
+                    android:hint="Giới thiệu bản thân"
+                    android:inputType="textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- SỐ ĐIỆN THOẠI CÁ NHÂN -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Số điện thoại"
+                    android:inputType="phone"
+                    android:maxLength="15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- EMAIL CÁ NHÂN -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- FORM DOANH NGHIỆP -->
+
+        <LinearLayout
+            android:id="@+id/formDoanhNghiep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Thông tin doanh nghiệp"
+                android:textColor="#30377F"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- TÊN DOANH NGHIỆP -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTenDoanhNghiep"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Tên doanh nghiệp / hàng quán"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ĐỊA CHỈ DOANH NGHIỆP -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDiaChiDoanhNghiep"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Địa chỉ doanh nghiệp"
+                    android:inputType="textPostalAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- SỐ ĐIỆN THOẠI DOANH NGHIỆP -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSDTDoanhNghiep"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Số điện thoại doanh nghiệp"
+                    android:inputType="phone"
+                    android:maxLength="15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- EMAIL DOANH NGHIỆP -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailDoanhNghiep"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Email doanh nghiệp"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- MÔ TẢ DOANH NGHIỆP -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtMoTaDoanhNghiep"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:gravity="top"
+                    android:hint="Giới thiệu doanh nghiệp / hàng quán"
+                    android:inputType="textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- NÚT TIẾP TỤC -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTiepTuc"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:text="Tiếp tục"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#30377F"
+            app:cornerRadius="15dp"
+            app:elevation="0dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F5FC">
+
+
+    <!-- ================================================= -->
+    <!-- NỘI DUNG CUỘN -->
+    <!-- ================================================= -->
+
+    <ScrollView
+        android:id="@+id/scrollSuaCongViec"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="20dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="30dp">
+
+
+            <!-- ================================================= -->
+            <!-- THANH TRÊN -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+                <!-- NÚT QUAY LẠI - LỚP TRÊN CÙNG -->
+                <ImageButton
+                    android:id="@+id/btnQuayLai2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:elevation="20dp"
+                    android:padding="8dp"
+                    android:contentDescription="Quay lại"
+                    app:tint="#111536"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!-- TIÊU ĐỀ -->
+
+                <TextView
+                    android:id="@+id/tvTieuDe"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+
+                    android:gravity="center"
+
+                    android:text="Sửa bài đăng"
+
+                    android:textColor="#20265F"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <!-- MÔ TẢ -->
+
+            <TextView
+                android:id="@+id/tvMoTa"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="2dp"
+
+                android:gravity="center"
+
+                android:text="Cập nhật thông tin công việc tuyển dụng"
+
+                android:textColor="#777777"
+                android:textSize="12sp" />
+
+
+            <!-- ================================================= -->
+            <!-- CARD THÔNG TIN CÔNG VIỆC -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardThongTinCongViec"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="1dp"
+
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+
+                    android:padding="16dp">
+
+
+                    <!-- ================================================= -->
+                    <!-- TÊN CÔNG VIỆC -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Tên công việc"
+
+                        android:textColor="#30377F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="7dp"
+
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="#30377F"
+                        app:hintEnabled="false">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtTenCongViec"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+
+                            android:hint="Nhập tên công việc"
+
+                            android:inputType="textCapSentences"
+
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+
+                            android:text="Nhân viên phục vụ"
+
+                            android:textColor="#333333"
+                            android:textSize="13sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- MÔ TẢ -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="18dp"
+
+                        android:text="Mô tả công việc"
+
+                        android:textColor="#30377F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="7dp"
+
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="#30377F"
+                        app:hintEnabled="false">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtMoTa"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+
+                            android:gravity="top|start"
+
+                            android:hint="Nhập mô tả công việc"
+
+                            android:inputType="textMultiLine"
+
+                            android:padding="12dp"
+
+                            android:text="Phục vụ khách hàng, hỗ trợ công việc tại cửa hàng."
+
+                            android:textColor="#333333"
+                            android:textSize="13sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- MỨC LƯƠNG -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="18dp"
+
+                        android:text="Mức lương"
+
+                        android:textColor="#30377F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="7dp"
+
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="#30377F"
+                        app:hintEnabled="false">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtLuong"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+
+                            android:hint="Nhập mức lương"
+
+                            android:inputType="number"
+
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+
+                            android:text="25000"
+
+                            android:textColor="#333333"
+                            android:textSize="13sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- ĐƠN VỊ TÍNH -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="18dp"
+
+                        android:text="Đơn vị tính lương"
+
+                        android:textColor="#30377F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <Spinner
+                        android:id="@+id/spinnerDonVi"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+
+                        android:layout_marginTop="7dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp" />
+
+
+                    <!-- ================================================= -->
+                    <!-- ĐỊA ĐIỂM -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="18dp"
+
+                        android:text="Địa điểm làm việc"
+
+                        android:textColor="#30377F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="7dp"
+
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="#30377F"
+                        app:hintEnabled="false">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtDiaDiem"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+
+                            android:hint="Nhập địa điểm"
+
+                            android:inputType="textCapSentences"
+
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+
+                            android:text="Thủ Dầu Một, Bình Dương"
+
+                            android:textColor="#333333"
+                            android:textSize="13sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- SỐ LƯỢNG -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="18dp"
+
+                        android:text="Số lượng cần tuyển"
+
+                        android:textColor="#30377F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="7dp"
+
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="#30377F"
+                        app:hintEnabled="false">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtSoLuong"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+
+                            android:hint="Nhập số lượng"
+
+                            android:inputType="number"
+
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+
+                            android:text="3"
+
+                            android:textColor="#333333"
+                            android:textSize="13sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- TRẠNG THÁI -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="18dp"
+
+                        android:text="Trạng thái tuyển dụng"
+
+                        android:textColor="#30377F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                    <Spinner
+                        android:id="@+id/spinnerTrangThai"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="7dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- NÚT LƯU -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLuuThayDoi"
+
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+
+                android:layout_marginTop="18dp"
+
+                android:text="Lưu thay đổi"
+
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                app:backgroundTint="#30377F"
+                app:cornerRadius="16dp"
+                app:elevation="4dp" />
+
+
+            <!-- ================================================= -->
+            <!-- NÚT HỦY -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHuy"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="8dp"
+
+                android:text="Hủy"
+
+                android:textAllCaps="false"
+                android:textColor="#30377F"
+                android:textSize="13sp"
+
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="14dp"
+                app:elevation="0dp"
+                app:strokeColor="#30377F"
+                app:strokeWidth="1dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ================================================= -->
+    <!-- NÚT QUAY LẠI NỔI TRÊN CÙNG -->
+    <!-- ================================================= -->
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+
+        android:elevation="50dp" />
+
+</FrameLayout>

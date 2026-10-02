@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F3F5FC"
+
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+
+    <!-- ===================================================== -->
+    <!-- HEADER XANH -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerGroup"
+
+        android:layout_width="0dp"
+        android:layout_height="235dp"
+
+        app:cardBackgroundColor="#30377F"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ===================================================== -->
+    <!-- CARD THÔNG TIN NGƯỜI DÙNG -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardUserInfo"
+
+        android:layout_width="0dp"
+        android:layout_height="138dp"
+
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="125dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- AVATAR -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAvatar"
+
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+
+                android:layout_marginStart="20dp"
+
+                app:cardBackgroundColor="#EAF5FA"
+                app:cardCornerRadius="45dp"
+                app:cardElevation="0dp"
+
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:padding="7dp"
+
+                    android:contentDescription="Ảnh đại diện"
+
+                    android:scaleType="centerCrop"
+
+                    android:src="@drawable/ic_user" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- MÃ NGƯỜI DÙNG -->
+
+            <TextView
+                android:id="@+id/tvMaNguoiDung"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+
+                android:text="0032456"
+
+                android:textColor="#A8A8A8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@id/cardAvatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cardAvatar" />
+
+
+            <!-- TÊN -->
+
+            <TextView
+                android:id="@+id/tvHoTen"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="4dp"
+
+                android:text="Nguyễn Hoàng Khánh"
+
+                android:textColor="#222222"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@id/cardAvatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMaNguoiDung" />
+
+
+            <!-- TRẠNG THÁI -->
+
+            <TextView
+                android:id="@+id/tvTrangThai"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+
+                android:text="Đang hoạt động"
+                android:textColor="#4CAF50"
+                android:textSize="9sp"
+
+                app:layout_constraintStart_toEndOf="@id/cardAvatar"
+                app:layout_constraintTop_toBottomOf="@id/tvHoTen" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- Ô TÌM KIẾM -->
+    <!-- ===================================================== -->
+
+    <!-- ===================================================== -->
+    <!-- Ô TÌM KIẾM -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchGroup"
+
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="46dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="19dp"
+        app:cardElevation="0dp"
+
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardUserInfo">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edtTimKiemNhom"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:hint="Tìm kiếm công việc..."
+                android:paddingStart="14dp"
+                android:paddingEnd="5dp"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="#555555"
+                android:textColorHint="#B5B5B5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnSearchGroup"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+            <!-- NÚT TÌM KIẾM -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearchGroup"
+
+                android:layout_width="58dp"
+                android:layout_height="48dp"
+
+                android:padding="0dp"
+
+                android:text="⌕"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+
+                app:backgroundTint="#30377F"
+                app:cornerRadius="19dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ===================================================== -->
+    <!-- TIÊU ĐỀ -->
+    <!-- ===================================================== -->
+
+    <TextView
+        android:id="@+id/tvDanhSachNhom"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="28dp"
+
+        android:text="Công việc đang tham gia"
+
+        android:textColor="#30377F"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/searchGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ===================================================== -->
+    <!-- DANH SÁCH -->
+    <!-- ===================================================== -->
+
+    <ScrollView
+        android:id="@+id/scrollDanhSachNhom"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="10dp"
+
+        android:clipToPadding="false"
+        android:fillViewport="false"
+
+        android:paddingBottom="100dp"
+
+        android:scrollbars="none"
+
+        app:layout_constraintTop_toBottomOf="@id/tvDanhSachNhom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/layoutDanhSachNhom"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <!-- ================================================= -->
+            <!-- CARD CÔNG VIỆC 1 -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNhom1"
+
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+
+                android:layout_marginBottom="10dp"
+
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <!-- THANH MÀU XANH BÊN TRÁI -->
+
+                    <View
+                        android:id="@+id/lineNhom1"
+
+                        android:layout_width="4dp"
+                        android:layout_height="0dp"
+
+                        android:background="#30377F"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <!-- AVATAR -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/avatarNhom1"
+
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+
+                        android:layout_marginStart="12dp"
+
+                        app:cardBackgroundColor="#F1F3FC"
+                        app:cardCornerRadius="28dp"
+                        app:cardElevation="0dp"
+
+                        app:strokeColor="@android:color/transparent"
+                        app:strokeWidth="0dp"
+
+                        app:layout_constraintStart_toEndOf="@id/lineNhom1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+
+                            android:layout_gravity="center"
+
+                            android:contentDescription="Ảnh công việc"
+
+                            android:src="@drawable/ic_user"
+                            app:tint="#30377F" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <!-- TÊN CÔNG VIỆC -->
+
+                    <TextView
+                        android:id="@+id/tvTenNhom1"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="45dp"
+
+                        android:text="Cafe americano"
+
+                        android:textColor="#252525"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+
+                        android:maxLines="1"
+                        android:ellipsize="end"
+
+                        app:layout_constraintStart_toEndOf="@id/avatarNhom1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/avatarNhom1" />
+
+
+                    <!-- MÔ TẢ -->
+
+                    <TextView
+                        android:id="@+id/tvMoTaNhom1"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="45dp"
+                        android:layout_marginTop="3dp"
+
+                        android:text="Công việc pha chế ở Cafe Americano"
+
+                        android:textColor="#777777"
+                        android:textSize="9sp"
+
+                        android:maxLines="1"
+                        android:ellipsize="end"
+
+                        app:layout_constraintStart_toEndOf="@id/avatarNhom1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTenNhom1" />
+
+
+                    <!-- THỜI GIAN -->
+
+                    <TextView
+                        android:id="@+id/tvThoiGian1"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="3dp"
+
+                        android:text="Hôm nay • 07:00"
+
+                        android:textColor="#9A9A9A"
+                        android:textSize="8sp"
+
+                        app:layout_constraintStart_toEndOf="@id/avatarNhom1"
+                        app:layout_constraintTop_toBottomOf="@id/tvMoTaNhom1" />
+
+
+                    <!-- NÚT XEM -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnXemNhom1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Xem nhóm"
+                        app:cardBackgroundColor="#30377F"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/transparent"
+                        app:strokeWidth="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="›"
+                            android:textColor="#FFFFFF"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:importantForAccessibility="no" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <!-- ================================================= -->
+            <!-- CARD CÔNG VIỆC 2 -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNhom2"
+
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+
+                android:layout_marginBottom="10dp"
+
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="0dp"
+
+                        android:background="#5059B8"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/avatarNhom2"
+
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+
+                        android:layout_marginStart="12dp"
+
+                        app:cardBackgroundColor="#F1F3FC"
+                        app:cardCornerRadius="28dp"
+                        app:cardElevation="0dp"
+
+                        app:strokeColor="@android:color/transparent"
+                        app:strokeWidth="0dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+
+                            android:layout_gravity="center"
+
+                            android:src="@drawable/ic_user"
+                            app:tint="#30377F" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <TextView
+                        android:id="@+id/tvTenNhom2"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="45dp"
+
+                        android:text="Cafe americano"
+
+                        android:textColor="#252525"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+
+                        android:maxLines="1"
+                        android:ellipsize="end"
+
+                        app:layout_constraintStart_toEndOf="@id/avatarNhom2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/avatarNhom2" />
+
+
+                    <TextView
+                        android:id="@+id/tvMoTaNhom2"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="11dp"
+                        android:layout_marginEnd="45dp"
+                        android:layout_marginTop="3dp"
+
+                        android:text="Công việc pha chế ở Cafe Americano"
+
+                        android:textColor="#777777"
+                        android:textSize="9sp"
+
+                        android:maxLines="1"
+                        android:ellipsize="end"
+
+                        app:layout_constraintStart_toEndOf="@id/avatarNhom2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTenNhom2" />
+
+
+                    <TextView
+                        android:id="@+id/tvThoiGian2"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="3dp"
+
+                        android:text="28/09/2026 • 07:00"
+
+                        android:textColor="#9A9A9A"
+                        android:textSize="8sp"
+
+                        app:layout_constraintStart_toEndOf="@id/avatarNhom2"
+                        app:layout_constraintTop_toBottomOf="@id/tvMoTaNhom2" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnXemNhom2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Xem nhóm"
+                        app:cardBackgroundColor="#5059B8"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@android:color/transparent"
+                        app:strokeWidth="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="›"
+                            android:textColor="#FFFFFF"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:importantForAccessibility="no" />
+
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ===================================================== -->
+    <!-- NÚT THÊM -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnThemNhom"
+
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="88dp"
+
+        android:clickable="true"
+        android:focusable="true"
+
+        android:elevation="8dp"
+
+        app:cardBackgroundColor="#30377F"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+
+            android:layout_gravity="center"
+
+            android:contentDescription="Thêm"
+
+            android:src="@drawable/ic_plus"
+            app:tint="#FFFFFF" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ===================================================== -->
+    <!-- THANH ĐIỀU HƯỚNG DƯỚI -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomNavigation"
+
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="9dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="0dp"
+
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            android:weightSum="4">
+
+
+            <!-- ================================================= -->
+            <!-- HOME -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:id="@+id/navHome"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgHomeNormal"
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:layout_gravity="center"
+
+                    android:contentDescription="Trang chủ"
+
+                    android:src="@drawable/ic_house"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:id="@+id/navNotification"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgNotification"
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:layout_gravity="center"
+
+                    android:contentDescription="Thông báo"
+
+                    android:src="@drawable/ic_bell"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+
+            <!-- ================================================= -->
+            <!-- NHÓM -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:id="@+id/navGroup"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+
+                <!-- Chừa chỗ cho icon nổi -->
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="top" />
+
+
+                <!-- Chữ NHÓM -->
+
+                <TextView
+                    android:id="@+id/tvGroup"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center_horizontal|bottom"
+
+                    android:layout_marginBottom="6dp"
+
+                    android:text="Nhóm"
+
+                    android:textColor="#30377F"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <!-- ================================================= -->
+            <!-- CÁ NHÂN -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:id="@+id/navPerson"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgPerson"
+
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+
+                    android:layout_gravity="center"
+
+                    android:contentDescription="Cá nhân"
+
+                    android:src="@drawable/ic_user"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- ICON NHÓM NỔI - LỚP TRÊN CÙNG -->
+    <!-- ===================================================== -->
+
+    <FrameLayout
+        android:id="@+id/groupFloating"
+
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+
+        android:clipChildren="false"
+        android:clipToPadding="false"
+
+        android:elevation="100dp"
+        android:translationZ="100dp"
+
+        android:translationY="-29dp"
+
+        app:layout_constraintWidth_percent="0.25"
+
+        app:layout_constraintStart_toStartOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="@id/bottomNavigation"
+
+        app:layout_constraintHorizontal_bias="0.6667"
+
+        app:layout_constraintBottom_toBottomOf="@id/bottomNavigation">
+
+
+        <!-- ================================================= -->
+        <!-- VÒNG NGOÀI -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+
+            android:layout_gravity="center"
+
+            android:elevation="100dp"
+            android:translationZ="100dp"
+
+            app:cardBackgroundColor="#F3F5FC"
+            app:cardCornerRadius="31dp"
+            app:cardElevation="0dp"
+
+            app:strokeColor="@android:color/transparent"
+            app:strokeWidth="0dp">
+
+
+            <!-- ============================================= -->
+            <!-- VÒNG XANH -->
+            <!-- ============================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+
+                android:layout_gravity="center"
+
+                android:elevation="100dp"
+                android:translationZ="100dp"
+
+                app:cardBackgroundColor="#30377F"
+                app:cardCornerRadius="23dp"
+                app:cardElevation="12dp"
+
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+
+                <ImageView
+                    android:id="@+id/imgGroupFloating"
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:layout_gravity="center"
+
+                    android:contentDescription="Nhóm"
+
+                    android:src="@drawable/ic_users"
+                    app:tint="#FFFFFF" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

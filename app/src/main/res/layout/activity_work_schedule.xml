@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F3F5FC"
+
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+
+    <!-- ===================================================== -->
+    <!-- NỘI DUNG LỊCH -->
+    <!-- ===================================================== -->
+
+    <ScrollView
+        android:id="@+id/scrollLich"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+
+        android:paddingBottom="90dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/layoutLich"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="14dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- ================================================= -->
+            <!-- TIÊU ĐỀ -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/tvTieuDe"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+
+                android:text="Lịch làm việc"
+
+                android:textColor="#30377F"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvThang"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp"
+
+                android:gravity="center"
+
+                android:text="Tuần 22 - 28 tháng 09"
+
+                android:textColor="#888888"
+                android:textSize="10sp" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+
+            <!-- ================================================= -->
+            <!-- NÚT CHUYỂN TUẦN -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/layoutChuyenTuan"
+
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <!-- TUẦN TRƯỚC -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnTuanTruoc"
+
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="#E1E4EF"
+                    app:strokeWidth="1dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+
+                        android:text="‹  Tuần trước"
+
+                        android:textColor="#30377F"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- TUẦN HIỆN TẠI -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTuanHienTai"
+
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+
+                    app:cardBackgroundColor="#E8EAF7"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="#D9DCEF"
+                    app:strokeWidth="1dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+
+                        android:text="Tuần này"
+
+                        android:textColor="#30377F"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- TUẦN SAU -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnTuanSau"
+
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+
+                    app:cardBackgroundColor="#30377F"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="#252B6D"
+                    app:strokeWidth="1dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+
+                        android:text="Tuần sau  ›"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+
+            <!-- ================================================= -->
+            <!-- CARD LỊCH -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCalendar"
+
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="17dp"
+                app:cardElevation="0dp"
+
+                app:strokeColor="#DDE1EC"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+
+                    <!-- ================================================= -->
+                    <!-- THỨ -->
+                    <!-- ================================================= -->
+
+                    <LinearLayout
+                        android:id="@+id/headerDays"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+
+                        android:background="#30377F"
+
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Mon"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Tue"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Wed"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Thu"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Fri"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Sat"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Sun"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- VÙNG LỊCH -->
+                    <!-- ================================================= -->
+
+                    <LinearLayout
+                        android:id="@+id/calendarGrid"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <!-- ================================================= -->
+                        <!-- DÒNG 1 -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <!-- MON -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <!-- TUE -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <!-- WED -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <!-- THU -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <!-- FRI -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <!-- SAT -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <!-- SUN -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                        </LinearLayout>
+
+
+                        <!-- ================================================= -->
+                        <!-- DÒNG 2 -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                        </LinearLayout>
+
+
+                        <!-- ================================================= -->
+                        <!-- DÒNG 3 - CÓ LỊCH -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+
+                            <!-- MON -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+
+                            <!-- TUE -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+
+                            <!-- WED - LỊCH -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="2dp"
+
+                                    app:cardBackgroundColor="#FF5C5C"
+                                    app:cardCornerRadius="4dp"
+                                    app:cardElevation="0dp"
+
+                                    app:strokeColor="#F04F4F"
+                                    app:strokeWidth="1dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="1:00 - 5:00"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="7sp" />
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <!-- THU -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+
+                            <!-- FRI - LỊCH -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="2dp"
+
+                                    app:cardBackgroundColor="#666DAA"
+                                    app:cardCornerRadius="4dp"
+                                    app:cardElevation="0dp"
+
+                                    app:strokeColor="#59609C"
+                                    app:strokeWidth="1dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="1:00 - 5:00"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="7sp" />
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <!-- SAT -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+
+                            <!-- SUN - LỊCH -->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="2dp"
+
+                                    app:cardBackgroundColor="#666DAA"
+                                    app:cardCornerRadius="4dp"
+                                    app:cardElevation="0dp"
+
+                                    app:strokeColor="#59609C"
+                                    app:strokeWidth="1dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="7:00 - 11:00"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="7sp" />
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+
+                        <!-- ================================================= -->
+                        <!-- DÒNG 4 -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                        </LinearLayout>
+
+
+                        <!-- ================================================= -->
+                        <!-- DÒNG 5 -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FAFBFD"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="#FFFFFF"
+                                app:cardCornerRadius="0dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#E5E7EF"
+                                app:strokeWidth="1dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- CHÚ THÍCH -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/layoutChuThich"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+
+                    app:cardBackgroundColor="#FF5C5C"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#F04F4F"
+                    app:strokeWidth="1dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="5dp"
+
+                    android:text="Lịch làm việc"
+
+                    android:textColor="#777777"
+                    android:textSize="9sp" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+
+                    android:layout_marginStart="18dp"
+
+                    app:cardBackgroundColor="#666DAA"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#59609C"
+                    app:strokeWidth="1dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Đã đăng ký"
+                    android:textColor="#777777"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!-- ===================================================== -->
+    <!-- THANH ĐIỀU HƯỚNG DƯỚI -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="9dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <FrameLayout
+                android:id="@+id/navHome"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgHomeNormal"
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:layout_gravity="center"
+
+                    android:contentDescription="Trang chủ"
+
+                    android:src="@drawable/ic_house"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgNotification"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Thông báo"
+                    android:src="@drawable/ic_bell"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+
+            <!-- ================================================= -->
+            <!-- NHÓM -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgGroup"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Nhóm"
+                    android:src="@drawable/ic_users"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+
+            <!-- ================================================= -->
+            <!-- CÁ NHÂN -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgPerson"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Cá nhân"
+                    android:src="@drawable/ic_user"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

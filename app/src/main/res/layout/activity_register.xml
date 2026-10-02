@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ================= PHẦN SÓNG ================= -->
+
+    <ImageView
+        android:id="@+id/imgWave"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/wave_top"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- NÚT QUAY LẠI - LỚP TRÊN CÙNG -->
+    <ImageButton
+        android:id="@+id/btnQuayLai2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_menu_revert"
+        android:elevation="20dp"
+        android:contentDescription="Quay lại"
+        app:tint="#111536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- ================= LOGO ================= -->
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="224dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Logo SHIFTGO"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_shiftgo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- ================= SHIFTGO ================= -->
+
+
+    <!-- ================= REGISTER ================= -->
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Register"
+        android:textColor="#252B78"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imgWave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================= USERNAME ================= -->
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="36dp"
+        android:background="#F1F2F3"
+        android:hint="Username"
+        android:paddingStart="19dp"
+        android:paddingEnd="19dp"
+        android:textColor="#333333"
+        android:textColorHint="#A6A6A6"
+        android:textSize="16sp"
+        android:fontFamily="serif"
+        android:inputType="text"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/tvRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================= PASSWORD ================= -->
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:background="#F1F2F3"
+        android:hint="Password"
+        android:paddingStart="19dp"
+        android:paddingEnd="55dp"
+        android:textColor="#333333"
+        android:textColorHint="#A6A6A6"
+        android:textSize="16sp"
+        android:fontFamily="serif"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/edtUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================= MẮT PASSWORD ================= -->
+
+    <ImageView
+        android:id="@+id/imgEyePassword"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/ic_eye"
+        android:scaleType="fitCenter"
+        android:contentDescription="Hiện mật khẩu"
+        app:layout_constraintTop_toTopOf="@id/edtPassword"
+        app:layout_constraintBottom_toBottomOf="@id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@id/edtPassword" />
+
+
+    <!-- ================= NHẬP LẠI PASSWORD ================= -->
+
+    <EditText
+        android:id="@+id/edtRePassword"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:background="#F1F2F3"
+        android:hint="Re password"
+        android:paddingStart="19dp"
+        android:paddingEnd="55dp"
+        android:textColor="#333333"
+        android:textColorHint="#A6A6A6"
+        android:textSize="16sp"
+        android:fontFamily="serif"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================= MẮT RE-PASSWORD ================= -->
+
+    <ImageView
+        android:id="@+id/imgEyeRePassword"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/ic_eye"
+        android:scaleType="fitCenter"
+        android:contentDescription="Hiện mật khẩu"
+        app:layout_constraintTop_toTopOf="@id/edtRePassword"
+        app:layout_constraintBottom_toBottomOf="@id/edtRePassword"
+        app:layout_constraintEnd_toEndOf="@id/edtRePassword" />
+
+
+    <!-- ================= NÚT ĐĂNG NHẬP ================= -->
+
+    <Button
+        android:id="@+id/btnDangNhap"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Tạo tài khoản"
+        android:textAllCaps="false"
+        android:textColor="#252B78"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:strokeColor="#252B78"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@id/edtRePassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

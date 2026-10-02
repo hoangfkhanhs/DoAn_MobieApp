@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F5FC"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+
+    <!-- ===================================================== -->
+    <!-- HEADER -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+
+        app:cardBackgroundColor="#30377F"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- AVATAR -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAvatar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+
+                app:cardBackgroundColor="#EAF6FF"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="☁"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- MÃ NGƯỜI DÙNG -->
+
+            <TextView
+                android:id="@+id/tvMaNguoiDung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="48dp"
+                android:text="Mã mời: 000001"
+                android:textColor="#D9DBEE"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- HỌ TÊN -->
+            <TextView
+                android:id="@+id/tvHoTen"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:minWidth="48dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Thêm thông tin"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMaNguoiDung" />
+
+            <!-- ================================================= -->
+            <!-- NGÀY -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/dateContainer"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/tvNgay0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="01\nMon"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <TextView
+                    android:id="@+id/tvNgay1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="02\nTue"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <TextView
+                    android:id="@+id/tvNgay2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="03\nWed"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <TextView
+                    android:id="@+id/tvNgay3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="04\nThu"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <TextView
+                    android:id="@+id/tvNgay4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="05\nFri"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <TextView
+                    android:id="@+id/tvNgay5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="06\nSat"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <TextView
+                    android:id="@+id/tvNgay6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="07\nSun"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- THÔNG BÁO -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardThongBao"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="23dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvGio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+
+                android:text="7:30"
+                android:textColor="#999999"
+                android:textSize="7sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCongViec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="12dp"
+
+                android:text="24/9 có lịch ở Cafe Americano"
+                android:textColor="#30377F"
+                android:textSize="8sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGio" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- TÌM KIẾM -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSearch"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="22dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardThongBao">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/edtTimKiem"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:minHeight="48dp"
+                android:background="@android:color/transparent"
+                android:hint="Tìm kiếm công việc..."
+                android:paddingStart="12dp"
+                android:paddingEnd="8dp"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="#555555"
+                android:textColorHint="#B5B5B5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnSearch"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearch"
+                android:layout_width="58dp"
+                android:layout_height="48dp"
+                android:padding="0dp"
+
+                android:text="⌕"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+
+                app:backgroundTint="#30377F"
+                app:cornerRadius="0dp"
+                app:strokeWidth="0dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- THỐNG KÊ -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardThongKe"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="11dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cardLich"
+        app:layout_constraintTop_toBottomOf="@id/cardSearch">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgChart"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="Thống kê"
+                android:src="@drawable/ic_chart"
+                app:tint="#30377F" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thống kê"
+                android:textColor="#30377F"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- LỊCH LÀM VIỆC -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLich"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="35dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toEndOf="@id/cardThongKe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardSearch">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgCalendar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="Lịch làm việc"
+                android:src="@drawable/ic_calendar"
+                app:tint="#30377F" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lịch làm việc"
+                android:textColor="#30377F"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- ĐĂNG KÝ LỊCH -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDangKy"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="11dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cardThem"
+        app:layout_constraintTop_toBottomOf="@id/cardThongKe">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgCalendarPlus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="Đăng ký lịch"
+                android:src="@drawable/ic_calendarplus"
+                app:tint="#30377F" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký lịch"
+                android:textColor="#30377F"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- XEM THÊM -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardThem"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toEndOf="@id/cardDangKy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardLich">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgPlus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="Xem thêm"
+                android:src="@drawable/ic_plus"
+                app:tint="#30377F" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xem thêm"
+                android:textColor="#30377F"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- THANH ĐIỀU HƯỚNG DƯỚI -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="9dp"
+
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <!-- Ô TRỐNG CHO HOME -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="#30377F"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="4dp" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- THÔNG BÁO -->
+            <!-- ================================================= -->
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgBell"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="Thông báo"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_bell"
+                    app:tint="#30377F" />
+                <!--                <ImageView-->
+<!--                    android:id="@+id/imgNotification"-->
+<!--                    android:layout_width="27dp"-->
+<!--                    android:layout_height="27dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:contentDescription="Thông báo"-->
+<!--                    android:src="@drawable/ic_bell"-->
+<!--                    app:tint="#30377F" />-->
+
+            </FrameLayout>
+
+
+            <!-- ================================================= -->
+            <!-- NHÓM -->
+            <!-- ================================================= -->
+            <!-- NHÓM -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgGroup"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Nhóm"
+                    android:src="@drawable/ic_users"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+            <!-- CÁ NHÂN -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgPerson"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Cá nhân"
+                    android:src="@drawable/ic_user"
+                    app:tint="#30377F" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- ===================================================== -->
+    <!-- HOME NỔI - ĐẶT NGOÀI bottomNavigation -->
+    <!-- ===================================================== -->
+
+    <FrameLayout
+        android:id="@+id/homeFloating"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+
+        android:clipChildren="false"
+        android:clipToPadding="false"
+
+        android:elevation="30dp"
+        android:translationZ="30dp"
+
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintStart_toStartOf="@id/bottomNavigation"
+        app:layout_constraintBottom_toBottomOf="@id/bottomNavigation"
+
+        android:translationY="-25dp">
+
+
+        <!-- ================================================= -->
+        <!-- VÒNG NGOÀI 62DP -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+
+            app:cardBackgroundColor="#F3F5FC"
+            app:cardCornerRadius="29dp"
+            app:cardElevation="0dp"
+
+            app:strokeColor="@android:color/transparent"
+            app:strokeWidth="0dp" />
+
+
+        <!-- ================================================= -->
+        <!-- VÒNG XANH 46DP -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+
+            android:elevation="30dp"
+            android:translationZ="30dp"
+
+            app:cardBackgroundColor="#30377F"
+            app:cardCornerRadius="23dp"
+            app:cardElevation="12dp"
+
+            app:strokeColor="@android:color/transparent"
+            app:strokeWidth="0dp">
+
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+
+                android:contentDescription="Trang chủ"
+                android:src="@drawable/ic_house"
+                app:tint="#FFFFFF" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
